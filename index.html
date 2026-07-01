@@ -1,59 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spline 3D Scene</title>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.97/build/spline-viewer.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 45%, #7e22ce 100%);
+    position: relative;
+  }
+  spline-viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  /* Tombol Mulai */
+  .start-btn {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 
-    <link rel="stylesheet" href="style.css">
+    padding: 16px 44px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-decoration: none;
 
-    <title>Happy Birthday</title>
+    background: linear-gradient(135deg, #a855f7, #6d28d9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .start-btn:hover {
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 12px 36px rgba(124, 58, 237, 0.7);
+  }
+  .start-btn:active {
+    transform: translateX(-50%) translateY(0);
+  }
+</style>
 </head>
-
 <body>
+  <spline-viewer url="https://prod.spline.design/N0lh-DueGYBmFGdx/scene.splinecode"></spline-viewer>
 
-    <div class="card">
-
-        <!-- Cover -->
-        <div class="imgBox">
-            <div class="bark"></div>
-
-            <img src="./images/fto.jpeg" alt="Foto">
-
-            <div class="caption">
-                Congratulations Nyutt ❤️
-            </div>
-        </div>
-
-        <!-- Isi Kartu -->
-        <div class="details">
-
-            <p>Congratulations nyut atas keterimamu di top 10, walaupun bukan impianmu, you have proven that you can get accepted into a top 10 public university.</p>
- 
-            <p>Disitulah jalan yang baik dan sudah diberikan oleh Allah untukmu, van.</p>
- 
-            <p>Sekarang, kamu fokus untuk mencapai IPK yang tinggi, mengikuti organisasi yang aktif, mahasiswa terbaik, dan mencapai lulusan terbaik seangkatan. Aku tunggu kelulusanmu dan penghargaan yang kamu raih.</p>
- 
-            <p>Kamu nanti gak boleh nangis/menyerah kalau kamu menghadapi cobaan waktu kuliah, kamu kuat kan jadi gak boleh nangis/menyerah ya. Gapapa kok kamu cerita seperti apa yang kamu ajarin ya.</p>
- 
-            <p>Maaf ya kalau aku selama ini ganggu waktu kamu terus, bahkan bisa jadi membuatmu risih. Maaf ya van.</p>
- 
-            <p>I believe you can definitely achieve what you want and realize your dreams, van.</p>
- 
-            <p class="text-right">
-                Salam PTR.
-            </p>
-
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
-
+  <!-- GANTI href di bawah ini dengan link tujuan kamu -->
+  <a class="start-btn" href="index.html" target="_blank" rel="noopener">
+    Mulai
+  </a>
 </body>
-
 </html>
